@@ -16,14 +16,14 @@ router.post('/signup', (req, res, next)  => {
     //destructuramoss del body para obtener solo los datos reelevantes 
 
     const {email,name,password,confirmPassword,pet,breed} = req.body
- 
-    //validar si el passsword es correcto ? 
+
+    //validar si el passsword es correcto ?
     if(password != confirmPassword){
         return  res.status(403).json({msg:"Las contraseñas no coinciden"})
     }
 
     //ahora encriptamosso hasheamos el password
-    
+
     bcrypt.hash(password,10)
     .then(hashedPass =>{
         const user = {
@@ -53,7 +53,7 @@ router.post('/signup', (req, res, next)  => {
 
 });
 
-//Ruta login para obvio hacer login 
+//Ruta login para obvio hacer login
 router.post("/login",(req,res)=>{
 
     const { email , password} = req.body;
@@ -77,7 +77,7 @@ router.post("/login",(req,res)=>{
                     secure:false, // si lo ponemoss en true unicamente esta cooki funciona en peticions hacia httpss
                     httpOnly:true
                 } ).status(200).json({ result:newUser })
-    
+
             }else{
                 return res.status(404).json({ msg:"El correo o contraseña son erroneos" })
             }
