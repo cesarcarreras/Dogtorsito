@@ -36,6 +36,7 @@ const authRouter = require('./routes/auth');
 
 app.use('/api', indexRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/users', usersRouter);
 app.use('/api/users/signup', usersRouter);
 app.use('/api/users/login', usersRouter);
 app.use('/api/users/logout', usersRouter);
