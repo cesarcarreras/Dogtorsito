@@ -21,7 +21,7 @@ const { checkRole,veryToken } = require("../util/auth-mid")
   GET users listing.
  Listar puros Alumnoss o USER
 */
-router.get('/students',veryToken,checkRole(["ADMIN"]), (req, res, next)=> {
+router.get('/clients',veryToken,checkRole(["ADMIN"]), (req, res, next)=> {
   
     User.find({$nor:[{ role:"ADMIN" }]})
     .then( users =>{
@@ -66,4 +66,3 @@ router.delete("/:id/deleteUser", veryToken , checkRole(["ADMIN"]), (res,req)=>{
 module.exports = router;
 
 
-module.exports = router;
