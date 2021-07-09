@@ -78,7 +78,7 @@ router.post("/login",(req,res)=>{
     .then(user =>{
         if(user === null){
             return res.status(404).json({ msg:"El correo o contraseña son erroneos" })
-        }
+        };
 
         bcrypt.compare(password, user.password)
         .then(match=>{
