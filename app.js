@@ -20,7 +20,7 @@ mongoose.connect(process.env.DB, {
 const app = express();
 
 //CORS después de inicializar express
-app.use(cors({origin:["http://localhost:3000", "https://www.paginasubida.com"], credentials: true}));
+app.use(cors({origin:["http://localhost:3000", "http://localhost:3001", "https://www.paginasubida.com"], credentials: true}));
 
 app.use(logger('dev'));
 app.use(express.json());

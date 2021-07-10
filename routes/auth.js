@@ -27,11 +27,28 @@ router.post('/signup', (req, res, next)  => {
         new Recipient(email, name)
       ];
 
+     const variables = [
+        {
+          email: email,
+          substitutions: [
+            {
+              var: "name",
+              value: name
+            },
+            {
+                var: "email",
+                value: email
+              },
+          ],
+        }
+      ];
+
       const emailParams = new EmailParams()
       .setFrom("welcome@cesarcarreras.com")
       .setFromName("Dogtorsito")
       .setRecipients(recipients)
       .setSubject("Welcome to our big fluffly community! 🐶")
+      .setVariables(variables)
       .setTemplateId('zr6ke4newe4on12w')
 
     //validar si el passsword es correcto
