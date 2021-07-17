@@ -27,6 +27,9 @@ const EventSchema = new Schema({
        type: Date,
        default:null
     }
+<<<<<<< HEAD
    
+=======
+>>>>>>> fd712999675717e9ac2ef52649ae6b70af517bbe
  });
 module.exports = model("Calendar", EventSchema)
