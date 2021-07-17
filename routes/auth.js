@@ -32,14 +32,19 @@ router.post('/signup', (req, res, next)  => {
           email: email,
           substitutions: [
             {
+              var: "email",
+              value: email
+            }
+        ]
+        },
+        {
+          name: name,
+          substitutions: [
+            {
               var: "name",
               value: name
-            },
-            {
-                var: "email",
-                value: email
-              },
-          ],
+             }
+         ]
         }
       ];
 
