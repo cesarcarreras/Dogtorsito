@@ -13,15 +13,15 @@ mongoose.connect(process.env.DB, {
 })
 .then((x)=>{
     console.log(`Connect to Mongo! Database name: "${x.connections[0].name}"`)
-}).catch((err)=>{
-    console.log("Error connecting to mongo", err)
+})
+.catch((error)=>{
+    console.log("Error connecting to mongo", error)
 });
 
 const app = express();
 
 //CORS después de inicializar express
-//Da permiso a otras apps
-app.use(cors({origin:["http://localhost:3000", "https://www.paginasubida.com"], credentials: true}));
+app.use(cors({origin:["http://localhost:3000", "http://localhost:3001", "https://dogtorsito.herokuapp.com"], credentials: true}));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Estas son las rutas, por practica se añade API
+//Estas son las rutas API:
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
@@ -37,8 +37,9 @@ const authRouter = require('./routes/auth');
 app.use('/api', indexRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/users/signup', usersRouter);
-app.use('/api/users/login', usersRouter);
-app.use('/api/users/logout', usersRouter);
+
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"))
+});
 
 module.exports = app;
