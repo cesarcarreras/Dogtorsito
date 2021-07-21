@@ -34,11 +34,13 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const calendarRouter = require('./routes/calendar');
+const petsRouter = require('./routes/petprofile')
 
 app.use('/api', indexRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/calendar', calendarRouter)
+app.use('/api/calendar', calendarRouter);
+app.use('/api/petsprofile', petsRouter);
 
 app.use('*', (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"))
