@@ -34,10 +34,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const calendarRouter = require('./routes/calendar');
+const inventoryRouter = require('./routes/inventory')
 
 app.use('/api/auth', authRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/calendar', calendarRouter)
+app.use('/api/calendar', calendarRouter);
+app.use('/api/inventory',inventoryRouter);
 
 app.use('*', (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"))
