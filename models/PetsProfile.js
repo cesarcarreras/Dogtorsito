@@ -35,7 +35,6 @@ const petsSchema = new Schema({
         minlength:10,
         maxlength:140 //cantidad de caracteres
     },
-   
 
 }, {timestamp:true});
 
