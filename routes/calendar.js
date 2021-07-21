@@ -6,10 +6,11 @@ const { checkRole,veryToken } = require("../util/auth-mid")
 
 //Creamos la cita para el cliente
 router.post('/create',veryToken,checkRole(['ADMIN']),(req,res) =>{
-    const {_id:_vet} = req.user
+    const {_id:_vet} = req.user //Modifcar para ocultar el ID
     Calendar.create({...req.body,_vet})
     .then(appointment => {
         res.status(200).json({result:appointment})
+        //Enviar correo cada vez que sea crea una cita
     })
     .catch(error=>{
         res.status(400).json({msg:"No se puede crear la cita",error})
