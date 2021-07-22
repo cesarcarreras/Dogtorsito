@@ -21,7 +21,7 @@ const userSchema = new Schema({
     },
     image: {
         type: String,
-        default: "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        default: "https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHVwcHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
     },
     pet: {
         type: String,
