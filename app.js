@@ -8,7 +8,7 @@ const mongoose = require('mongoose'); // <- Mongoose
 const cors = require("cors"); // <- cors
 
 //Iniciar conexión a la DB
-mongoose.connect(process.env.DB_PROD, {
+mongoose.connect(process.env.DB, {
     useUnifiedTopology: true
 })
 .then((x)=>{
