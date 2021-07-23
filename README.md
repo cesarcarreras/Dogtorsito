@@ -5,33 +5,38 @@ El objetivo de Dogtorsito es facilitar el registro de citas, así como el invent
 
 ## Desarrolladores:
 
-Mauricio Munoz, Cesar Carreras & Esau Acosta
+Mauricio Muñoz, Cesar Carreras & Esau Acosta
+
+## Demo
+
+[Prueba Dogtorsito](https://dogtorsito.herokuapp.com/)
+
 
 # Cuenta para probar el demo
 
-Usuario: cesar@gmail.com
-Contrasena: 123
+Usuario: cesar@gmail.com.\
+Contraseña: 123
 
 ## Tecnologías utilizadas
-NodeJS
-Express
-MongoDB
-JavaScript
-HTML
-CSS
+NodeJS.\
+Express.\
+MongoDB.\
+JavaScript.\
+HTML.\
+CSS.\
 Bootstrap
 # Instalación
 Si te gustaria ver nuestro proyecto en tu navegador:
 
-git clone https://github.com/cesarcarreras/Dogtorsito.git
-cd Dogtorsito
-npm run dev
+`git clone https://github.com/cesarcarreras/Dogtorsito.git.\`
+`cd Dogtorsito.\`
+`npm run dev.\`
 
 
 ## Variables de entorno
-PORT = puerco local de coneccion 
-DB = mongodb://localhost/dogtorsito
-DB_PROD = base de datos remota
+PORT = puerco local de coneccion .\
+DB = mongodb://localhost/dogtorsito.\
+DB_PROD = base de datos remota.\
 SECRET = Palabra secreta
 
 
