@@ -3,9 +3,7 @@ const {Schema, model} = mongoose;
 
 const inventorySchema = new Schema({
     category:{
-        type: String,
-        unique: [true,"Ya existe esta categoria"],
-        require: [true,"A que categoria pertenece"]
+        type: String
     },
     price:{
         type: String,
@@ -14,15 +12,12 @@ const inventorySchema = new Schema({
     },
     stock:{
         type: Number,
-        require : true
     },
     productName:{
         type:String,
-        require:[true, "Coloca el nombre del producto"]
-    },
+        },
     description:{
-        type: String,
-        require: [true, "Debes de colocar una descripcion del producto"]
+        type: String
     },
     image:{
         type: String,

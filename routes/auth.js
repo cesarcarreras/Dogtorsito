@@ -96,7 +96,6 @@ router.post('/signup', (req, res, next)  => {
 //LOGIN
 router.post("/login",(req,res)=>{
     const { email , password} = req.body;
-    console.log("prueba", req.body)
     User.findOne({email})
     .then(user =>{
         if(user === null){
