@@ -4,8 +4,6 @@ const {Schema, model} = mongoose;
 const inventorySchema = new Schema({
     category:{
         type: String,
-        unique: [true,"Ya existe esta categoria"],
-        require: [true,"A que categoria pertenece"]
     },
     price:{
         type: String,
@@ -22,11 +20,10 @@ const inventorySchema = new Schema({
     },
     description:{
         type: String,
-        require: [true, "Debes de colocar una descripcion del producto"]
     },
     image:{
         type: String,
-        default: "https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.citydogshare.org%2Fusers%2F83&psig=AOvVaw0DON6K6edOEt12ysJLdTL3&ust=1626906271101000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiGqqXY8vECFQAAAAAdAAAAABAD"
+        default: "https://cdns.iconmonstr.com/wp-content/assets/preview/2019/240/iconmonstr-product-3.png"
     }
 },{timestamps:true});
 
