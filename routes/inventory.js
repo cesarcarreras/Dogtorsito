@@ -6,7 +6,7 @@ const Inventory = require("../models/Inventory.js");
 const {checkRole, veryToken} = require("../util/auth-mid")
 
 //Llamar todo el inventario
-router.get("/",(req,res)=>{
+router.get("/",veryToken,checkRole(["ADMIN"]),(req,res)=>{
     Inventory.find()
     .then(inventories => {
         res.status(200).json({result:inventories})
@@ -17,13 +17,13 @@ router.get("/",(req,res)=>{
 });
 
 //Crear nuevo producto
-router.post("/create-product", veryToken,(req,res) =>{
+router.post("/create-product", veryToken,checkRole(["ADMIN"]),(req,res) => {
     Inventory.create(req.body)
     .then(inventory => {
         res.status(200).json({msg :"Producto creado con exito",inventory})
     })
     .catch(error => {
-        res.status(400).json(error)
+        res.status(400).json({msg :"Algo falló", error})
     })
 })
 
