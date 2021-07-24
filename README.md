@@ -1,6 +1,7 @@
 # Bienvenid@ a Dogtorsito - Welcome to Dogtorsito
 
-Dogtorsito es una aplicación diseñada para facilitar la comunicación entre un veterinario y una persona que quiere una cita o servicio para su mascota.
+Dogtorsito es una aplicación diseñada para facilitar la comunicación entre un veterinario y una persona que necesita una cita o servicio para su mascota.
+
 El objetivo de Dogtorsito es facilitar el registro de citas, así como el inventario de productos y el historial de mascotas.
 
 ## Desarrolladores:
@@ -14,8 +15,8 @@ Mauricio Muñoz, Cesar Carreras & Esau Acosta
 
 # Cuenta para probar el demo
 
--Usuario: cesar@gmail.com.\
--Contraseña: 123
+- Usuario: cesar@gmail.com.\
+- Contraseña: 123
 
 ## Tecnologías utilizadas
 -NodeJS.\
@@ -43,7 +44,7 @@ Mauricio Muñoz, Cesar Carreras & Esau Acosta
 
 ## Paginas
 
-Home.\
+Home
 
 -Login/Signup.\
 -Dashboard.\
@@ -69,20 +70,20 @@ Home.\
 -PetCard.\
 -SideBar.\
 -Team.\
--UserList.\
+-UserList.
 
 # Instalación
 Si te gustaria ver nuestro proyecto en tu navegador:
 
 `git clone https://github.com/cesarcarreras/Dogtorsito.git`.\
-`cd Dogtorsito`.\
+`cd Dogtorsito`\
 `npm run dev`
 
 
 ## Variables de entorno
-PORT = puerco local de coneccion .\
+PORT = puerto local de conexión .\
 DB = mongodb://localhost/dogtorsito.\
-DB_PROD = base de datos remota.\
+DB_PROD = Base de datos remota.\
 SECRET = Palabra secreta
 
 ## Dogtorsito :heart: :dog:
